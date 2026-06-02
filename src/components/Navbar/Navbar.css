@@ -1,0 +1,38 @@
+.navbar {
+  background: #34c94b;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.search {
+  display: flex;
+}
+
+.search input {
+  width: 400px;
+  padding: 10px;
+  border: none;
+}
+
+.search button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.feedback-btn {
+  background: black;
+  color: #34c94b;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
