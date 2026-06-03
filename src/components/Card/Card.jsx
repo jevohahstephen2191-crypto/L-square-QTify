@@ -1,7 +1,7 @@
 import Chip from "@mui/material/Chip";
 import "./Card.css";
 
-function Card({ album }) {
+function Card({ album, type }) {
   return (
     <div className="card-wrapper">
       <div className="card">
@@ -12,7 +12,13 @@ function Card({ album }) {
         />
 
         <div className="card-bottom">
-          <Chip label={`${album.follows} Follows`} />
+          <Chip
+            label={
+                type === "song"
+                ? `${album.likes} Likes`
+                : `${album.follows} Follows`
+            }
+            />
         </div>
       </div>
 
