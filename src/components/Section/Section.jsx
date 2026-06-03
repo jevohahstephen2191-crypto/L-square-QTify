@@ -37,7 +37,7 @@ function Section({ title, data, genres = [], type }) {
                 setCollapse(!collapse);
             }}
             >
-            {collapse ? "Show All" : "Collapse"}
+            {collapse ? "Collapse" : "Show All"}
             </button>
             )}
         </div>
