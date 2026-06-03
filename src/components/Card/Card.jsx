@@ -1,23 +1,23 @@
 import Chip from "@mui/material/Chip";
 import "./Card.css";
 
-function Card() {
+function Card({ album }) {
   return (
     <div className="card-wrapper">
-  <div className="card">
-    <img
-      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
-      alt="album"
-      className="card-image"
-    />
+      <div className="card">
+        <img
+          src={album.image}
+          alt={album.title}
+          className="card-image"
+        />
 
-    <div className="card-bottom">
-      <Chip label="100 Follows" />
+        <div className="card-bottom">
+          <Chip label={`${album.follows} Follows`} />
+        </div>
+      </div>
+
+      <p className="album-name">{album.title}</p>
     </div>
-  </div>
-
-  <p className="album-name">New English Songs</p>
-</div>
   );
 }
 
