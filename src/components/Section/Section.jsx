@@ -9,7 +9,7 @@ import Carousel from "../Carousel/Carousel";
 
 
 function Section({ title, data, genres = [], type }) {
-    const [collapse, setCollapse] = useState(title === "New Albums");
+    const [collapse, setCollapse] = useState(false);
     const [tabValue, setTabValue] = useState("all");
 
     const handleChange = (event, newValue) => {
@@ -31,10 +31,13 @@ function Section({ title, data, genres = [], type }) {
 
           {type !== "song" && (
             <button
-                className="collapse-btn"
-                onClick={() => setCollapse(!collapse)}
+            className="collapse-btn"
+            onClick={() => {
+                console.log(title, collapse);
+                setCollapse(!collapse);
+            }}
             >
-                {collapse ? "Show all" : "Collapse"}
+            {collapse ? "Show All" : "Collapse"}
             </button>
             )}
         </div>
